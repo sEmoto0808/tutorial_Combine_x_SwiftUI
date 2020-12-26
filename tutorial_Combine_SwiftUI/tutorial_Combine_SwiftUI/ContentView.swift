@@ -14,7 +14,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(observed.qiitaItems.indices, id: \.self) { index in
-                ListView(qiitaItem: self.$observed.qiitaItems[index])
+                NavigationLink(destination: DetailView(qiitaItem: self.$observed.qiitaItems[index]),
+                               label: {
+                                ListView(qiitaItem: self.$observed.qiitaItems[index])
+                               })
             }
             .navigationBarTitle("新着", displayMode: .automatic)
         }

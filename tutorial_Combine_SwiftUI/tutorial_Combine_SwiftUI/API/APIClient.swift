@@ -17,13 +17,13 @@ struct APIClient {
         return jsonDecoder
       }()
 
-    func request<V>(_ request: URLRequest) -> Future<V, APIError> where V: Codable {
+    static func request<T, V>(_ request: T) -> Future<V, APIError>
+        where T: APIRequestProtocol, V: Codable, T.ResponseType == V {
         
-        let task = AF.request(request).responseJSON { response in}
-        task.resume()
-        
+        let urlRequest = request.toURLRequest()
         let future = Future<V, APIError> { promise in
-            let task = AF.request(request)
+            
+            let task = AF.request(urlRequest)
                 .responseJSON { response in
                     switch response.result {
                     case .success:

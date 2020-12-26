@@ -11,17 +11,31 @@ import Combine
 
 struct APIClient {
 
-    func request(_ request: URLRequest) -> Future<String, APIError> {
+    static let decorder: JSONDecoder = {
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        return jsonDecoder
+      }()
+
+    func request<V>(_ request: URLRequest) -> Future<V, APIError> where V: Codable {
         
         let task = AF.request(request).responseJSON { response in}
         task.resume()
         
-        let future = Future<String, APIError> { promise in
+        let future = Future<V, APIError> { promise in
             let task = AF.request(request)
                 .responseJSON { response in
                     switch response.result {
                     case .success:
-                        promise(.success("Success"))
+                        do {
+                            if let json = response.data {
+                                let value = try APIClient.decorder.decode(V.self, from: json)
+                                promise(.success(value))
+                            }
+                        } catch {
+                            promise(.failure(.init(statusCode: response.response?.statusCode ?? 0,
+                                                   message: "Parse failed")))
+                        }
                     case .failure(let error):
                         promise(.failure(.init(statusCode: response.response?.statusCode ?? 0,
                                                message: error.errorDescription ?? "")))

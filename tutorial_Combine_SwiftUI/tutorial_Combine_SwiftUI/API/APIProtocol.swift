@@ -25,12 +25,12 @@ extension APIRequestProtocol {
     var headers: [String : String]? { nil }
     
     func toURLRequest() throws -> URLRequest {
-        let urlString = "baseUrl" + path
+        let urlString = APIConstant.baseURL + path
         
         var urlRequest = URLRequest(url: URL(string: urlString)!)
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = headers
-        urlRequest.timeoutInterval = TimeInterval(30)
+        urlRequest.timeoutInterval = APIConstant.timeInterval
         
         return urlRequest
     }

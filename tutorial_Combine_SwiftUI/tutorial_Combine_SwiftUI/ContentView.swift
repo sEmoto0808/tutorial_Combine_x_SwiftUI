@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @ObservedObject var observed = ViewModel()
+
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .onAppear(perform: observed.onAppear)
     }
 }
 

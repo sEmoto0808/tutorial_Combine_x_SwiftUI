@@ -24,10 +24,13 @@ extension APIRequestProtocol {
     var encoding: URLEncoding { URLEncoding.default }
     var headers: [String : String]? { nil }
     
-    func toURLRequest() throws -> URLRequest {
+    func toURLRequest() -> URLRequest {
         let urlString = APIConstant.baseURL + path
+        guard let url = URL(string: urlString) else {
+            fatalError("URL Parse failed.")
+        }
         
-        var urlRequest = URLRequest(url: URL(string: urlString)!)
+        var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         urlRequest.allHTTPHeaderFields = headers
         urlRequest.timeoutInterval = APIConstant.timeInterval

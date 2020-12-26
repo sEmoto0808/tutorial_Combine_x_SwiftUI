@@ -15,10 +15,12 @@ struct ListView: View {
         VStack {
             HStack {
                 Text(qiitaItem.user.id)
+                    .font(Font.system(size: 17))
                 Spacer()
             }
             HStack {
                 Text(qiitaItem.title)
+                    .font(Font.system(size: 22, weight: .bold, design: .default))
                 Spacer()
             }
             HStack {

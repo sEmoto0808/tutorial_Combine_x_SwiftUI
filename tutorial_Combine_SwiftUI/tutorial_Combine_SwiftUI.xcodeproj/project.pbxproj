@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A2101745259743BB004BF7C2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2101744259743BB004BF7C2 /* APIClient.swift */; };
+		A210174B259746D2004BF7C2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210174A259746D2004BF7C2 /* APIError.swift */; };
 		A2C6777325973C2C003A3B25 /* tutorial_Combine_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C6777225973C2C003A3B25 /* tutorial_Combine_SwiftUIApp.swift */; };
 		A2C6777525973C2C003A3B25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C6777425973C2C003A3B25 /* ContentView.swift */; };
 		A2C6777725973C2C003A3B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C6777625973C2C003A3B25 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		A2101744259743BB004BF7C2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A210174A259746D2004BF7C2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		A2C6776F25973C2C003A3B25 /* tutorial_Combine_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial_Combine_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C6777225973C2C003A3B25 /* tutorial_Combine_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorial_Combine_SwiftUIApp.swift; sourceTree = "<group>"; };
 		A2C6777425973C2C003A3B25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A2101744259743BB004BF7C2 /* APIClient.swift */,
+				A210174A259746D2004BF7C2 /* APIError.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C6777525973C2C003A3B25 /* ContentView.swift in Sources */,
+				A210174B259746D2004BF7C2 /* APIError.swift in Sources */,
 				A2C6777325973C2C003A3B25 /* tutorial_Combine_SwiftUIApp.swift in Sources */,
 				A2101745259743BB004BF7C2 /* APIClient.swift in Sources */,
 			);

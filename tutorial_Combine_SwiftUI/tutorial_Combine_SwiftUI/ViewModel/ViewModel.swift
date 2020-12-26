@@ -16,8 +16,10 @@ final class ViewModel: ObservableObject {
         self?.getItems()
     }
     
+    private let useCase = UseCase()
+
     func getItems() {
-        self.task = APIClient.request(QiitaItemRequest())
+        self.task = useCase.getQiitaItems()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 switch completion {

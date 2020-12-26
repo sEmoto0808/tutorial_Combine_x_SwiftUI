@@ -12,9 +12,13 @@ struct ContentView: View {
     @ObservedObject var observed = ViewModel()
 
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-            .onAppear(perform: observed.onAppear)
+        NavigationView {
+            List(observed.qiitaItems.indices, id: \.self) { index in
+                ListView(qiitaItem: self.$observed.qiitaItems[index])
+            }
+            .navigationBarTitle("新着", displayMode: .automatic)
+        }
+        .onAppear(perform: observed.onAppear)
     }
 }
 

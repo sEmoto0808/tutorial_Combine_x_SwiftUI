@@ -18,6 +18,7 @@
 		A210177025975A56004BF7C2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210176F25975A56004BF7C2 /* ViewModel.swift */; };
 		A210177725975C33004BF7C2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210177625975C33004BF7C2 /* Repository.swift */; };
 		A210177E25975CCD004BF7C2 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210177D25975CCD004BF7C2 /* UseCase.swift */; };
+		A210178425975E75004BF7C2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210178325975E75004BF7C2 /* ListView.swift */; };
 		A2C6777325973C2C003A3B25 /* tutorial_Combine_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C6777225973C2C003A3B25 /* tutorial_Combine_SwiftUIApp.swift */; };
 		A2C6777525973C2C003A3B25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C6777425973C2C003A3B25 /* ContentView.swift */; };
 		A2C6777725973C2C003A3B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C6777625973C2C003A3B25 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		A210176F25975A56004BF7C2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A210177625975C33004BF7C2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		A210177D25975CCD004BF7C2 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		A210178325975E75004BF7C2 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		A2C6776F25973C2C003A3B25 /* tutorial_Combine_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutorial_Combine_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C6777225973C2C003A3B25 /* tutorial_Combine_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorial_Combine_SwiftUIApp.swift; sourceTree = "<group>"; };
 		A2C6777425973C2C003A3B25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				A2101743259743A9004BF7C2 /* API */,
 				A2C6777225973C2C003A3B25 /* tutorial_Combine_SwiftUIApp.swift */,
 				A2C6777425973C2C003A3B25 /* ContentView.swift */,
+				A210178325975E75004BF7C2 /* ListView.swift */,
 				A2C6777625973C2C003A3B25 /* Assets.xcassets */,
 				A2C6777B25973C2C003A3B25 /* Info.plist */,
 				A2C6777825973C2C003A3B25 /* Preview Content */,
@@ -402,6 +405,7 @@
 				A210174F25974E16004BF7C2 /* APIProtocol.swift in Sources */,
 				A210176425975607004BF7C2 /* Tag.swift in Sources */,
 				A2101745259743BB004BF7C2 /* APIClient.swift in Sources */,
+				A210178425975E75004BF7C2 /* ListView.swift in Sources */,
 				A210175A25975515004BF7C2 /* User.swift in Sources */,
 				A210176925975672004BF7C2 /* QiitaItemRequest.swift in Sources */,
 				A210177725975C33004BF7C2 /* Repository.swift in Sources */,
